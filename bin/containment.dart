@@ -101,7 +101,13 @@ void startArea2 () {
 
   const Nightmare area2Nightmare = Nightmare(name: "Area 2 Nightmare", type: Type.nightmare, abilities: [], health: 2);
 
-  printCombatMenu(nightmare: area2Nightmare, gun: pistol, ammo: pistolAmmo);
+  Gun weapon = pistol;
+
+  if(character.inventory.items.contains(rifle)) {
+    weapon = rifle;
+  }
+
+  printCombatMenu(nightmare: area2Nightmare, gun: weapon, ammo: pistolAmmo);
 
   printConsoleMenu([
     const ConsoleMenuOption("Open the door", onSelect: startArea3),

@@ -45,18 +45,21 @@ class Character {
   Character addItem(Item item) {
     if (item == pistol || item == rifle) {
       if(inventory.items.contains(pistol)) {
-        List<Item> returnableInventory = inventory.items;
-        returnableInventory.remove(pistol);
-        returnableInventory.add(item);
-        return copyWith(inventory: PlayerInventory(items: returnableInventory));
+        List<Item> returnableItems = inventory.items;
+        returnableItems.remove(pistol);
+        returnableItems.add(item);
+        return copyWith(inventory: PlayerInventory(items: returnableItems));
       }
       if (inventory.items.contains(rifle)) {
+        List<Item> returnableItems = inventory.items;
+        returnableItems.remove(rifle);
+        returnableItems.add(item);
 
-        final newInventory = PlayerInventory();
-        return copyWith(inventory: PlayerInventory());
+        final newInventory = PlayerInventory(items: returnableItems);
+        return copyWith(inventory: newInventory);
       }
     }
-    copyWith(inventory: inventory.addItem(item));
+    return copyWith(inventory: inventory.addItem(item));
   }
 }
 
