@@ -1,3 +1,4 @@
+import 'character.dart';
 import 'item.dart';
 import 'nightmare.dart';
 
@@ -32,6 +33,15 @@ class Area {
       explored: explored ?? this.explored,
       nightmares: nightmares,
     );
+  }
+
+  void searchArea(Area room) {
+    for (final hiddenItem in room.hiddenItems) {
+      if (hiddenItem.brightnessRequired <= flashlightBrightness) {
+        character = character.addItem(hiddenItem.item);
+      }
+    }
+    return;
   }
 
 }
