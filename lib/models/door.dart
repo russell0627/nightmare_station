@@ -20,15 +20,18 @@ class Door {
     );
   }
 
-  void openDoor (Area area) {
+  void openDoor ({required Function areaFunction}) {
     if(locked == true) {
       if(character.inventory.items.contains(key)) {
         copyWith(locked: false);
         printMessage("You Opened The Door");
-        area.copyWith(playerInside: true, explored: true);
-        printMessage(leadsTo.description);
+        leadsTo.copyWith(playerInside: true, explored: true);
+        character.move(areaFunction: areaFunction);
       }
       printMessage("The door is locked and you do not have the key");
     }
+
+    character.move(areaFunction: areaFunction);
   }
+
 }
