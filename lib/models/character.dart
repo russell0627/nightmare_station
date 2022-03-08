@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import '../data/combat.dart';
 
 import '../data/items.dart';
 import '../utils/console_utils.dart';
+import 'area.dart';
 import 'item.dart';
 import 'player_inventory.dart';
 
@@ -19,6 +22,9 @@ class Character {
     required this.name,
     this.inventory = const PlayerInventory(),
   });
+
+  final _characterMoving = StreamController<Area>.broadcast();
+  Stream<Area> get characterMoving => _characterMoving.stream;
 
   @override
   String toString() => name;
