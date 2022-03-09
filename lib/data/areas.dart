@@ -4,10 +4,10 @@ import 'items.dart';
 
 const Area exampleArea = Area(name: "Example", description: "Example", playerInside: false);
 
-const Area startingArea = Area(name: "Starting Area", description: "You are in a dark room with peeling pieces of wallpaper with, "
-    "\nthe floor is creaky when you walk on it,\nthe room makes you feel nervous because you don't know what could have done this,\n"
-    "on one of the walls there is a door that goes somewhere but you do not know where",
-    playerInside: true, hiddenItems: [startingRoomHiddenPistol, startingRoomHiddenPistolAmmo, ]);
+const Area startingArea = Area(name: "Starting Area", description: "You are in a dark room with peeling pieces of wallpaper. "
+    "\nThe floor is creaky when you walk on it.\nThe room makes you feel nervous.\n"
+    "On one of the walls there is a door that goes somewhere but you do now know where.",
+    playerInside: true, hiddenItems: [startingRoomHiddenPistol, startingRoomHiddenPistolAmmo, hiddenKeyToArea2]);
 
 const Area area2 = Area(name: "Area 2", description: "In this room it is very dark, when you point your flashlight at one of the corners it seems to still be dark, "
     "you approach that corner, and suddenly you see some kind of all black creature with what looks like a human arm with many bite marks. "

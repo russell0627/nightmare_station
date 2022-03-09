@@ -115,7 +115,6 @@ class Ammo extends Item {
 }
 
 class Key extends Item {
-  final Door opens;
 
-  Key({required String name, required this.opens}) : super(name: name);
+  const Key({required String name}) : super(name: name);
 }

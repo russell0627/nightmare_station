@@ -8,7 +8,7 @@ class Door {
   final bool locked;
   final Key key;
 
-  Door({required this.key, required this.leadsTo, required this.locked});
+  const Door({required this.key, required this.leadsTo, required this.locked});
 
   Door copyWith({
     bool? locked,

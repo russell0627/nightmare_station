@@ -11,6 +11,8 @@ import 'package:nightmare_station/models/item.dart';
 import 'package:nightmare_station/models/nightmare.dart';
 import 'package:nightmare_station/utils/console_utils.dart';
 
+// TODO: Make it so that doors and keys have an id for checking matches
+
 void main() {
   viewCharacter();
   printMainMenu();
@@ -122,11 +124,9 @@ void startArea3 () {
 void printCredits () {
   const credit1 = "Coded By\nRussell Rasmussen";
   const credit2 = "Original Game Created By\nKieran Rasmussen";
-  const inMemoryOf = "In The Memory Of\nFluffy, Chicky, Griselda, Gerard Who Were The Chickens, and Dexter the Dog.";
   const endOfCredits = "END OF CREDITS";
 
   printMessage(credit1);
   printMessage(credit2);
-  printMessage(inMemoryOf);
   printMessage(endOfCredits);
 }
