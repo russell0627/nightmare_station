@@ -115,6 +115,7 @@ class Ammo extends Item {
 }
 
 class Key extends Item {
+  final int id;
 
-  const Key({required String name}) : super(name: name);
+  const Key({required String name, required this.id}) : super(name: name);
 }

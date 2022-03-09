@@ -5,6 +5,7 @@ import '../data/combat.dart';
 import '../data/items.dart';
 import '../utils/console_utils.dart';
 import 'area.dart';
+import 'door.dart';
 import 'item.dart';
 import 'player_inventory.dart';
 

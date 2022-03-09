@@ -11,7 +11,7 @@ import 'package:nightmare_station/models/item.dart';
 import 'package:nightmare_station/models/nightmare.dart';
 import 'package:nightmare_station/utils/console_utils.dart';
 
-// TODO: Make it so that doors and keys have an id for checking matches
+// TODO: Implement rolling into the combat system using roller
 
 void main() {
   viewCharacter();
@@ -31,7 +31,7 @@ void printMainMenu() {
 void startGame () {
   printMessage(startingArea.description);
   printConsoleMenu([
-    ConsoleMenuOption("Open Door", onSelect: () => doorToArea2.openDoor(areaFunction: startArea2)),
+    ConsoleMenuOption("Open Door", onSelect: () => doorToArea2.openDoor(areaFunction: startArea2, keyName: keyToArea2.name)),
     ConsoleMenuOption("Search Room", onSelect: () => searchRoom(startingArea)),
     const ConsoleMenuOption("View Inventory", onSelect: viewInventory),
     ConsoleMenuOption("Fight A Nightmare", onSelect: () => printCombatMenu(nightmare: nightmare, gun: pistol, ammo: pistolAmmo)),
